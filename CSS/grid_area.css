@@ -1,0 +1,54 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Defines three columns */
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    ". navBar ." /* navBar is centrally placed with space on either side */
+    "leftSideBar content rightSideBar"
+    ". footer .";
+}
+.grid-container img {
+  width: 100px;
+}
+
+.grid-container div {
+  background-color: lightgray;
+}
+
+.grid-container .header {
+  background-color: rgba(0, 255, 255, 0.42);
+  grid-area: header;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.grid-container .navBar {
+  background-color: rgb(110, 110, 247);
+  grid-area: navBar; /* Correctly places navBar in the defined area */
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grid-container .leftSideBar {
+  grid-area: leftSideBar;
+}
+
+.grid-container .content {
+  grid-area: content;
+  min-height: 200px;
+}
+
+.grid-container .rightSideBar {
+  grid-area: rightSideBar;
+}
+
+.grid-container .footer {
+  background-color: rgb(110, 110, 247);
+  grid-area: footer;
+  grid-column: 1 / 4;
+}

@@ -1,0 +1,30 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+ }
+ 
+ .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ width: fit-content;
+ gap: 10px;
+ background-color: rgb(89, 222, 222);
+}
+
+.grid-container label{
+    grid-column: 1;
+ 
+}
+.grid-container input{
+    grid-column: 2;
+}
+ 
+
+
+
+
+ 
